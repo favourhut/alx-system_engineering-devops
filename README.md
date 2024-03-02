@@ -1,5 +1,8 @@
 **Here are the steps i followed to use the SFTP command-line tool.**
 
+**NOTE: I did not uplaoded both png and jpg since the task only requested for either of them**
+** and my files are in PNG**
+
 **Here are the steps I followed to use the SFTP command-line tool:
 
 **First, I launched my terminal or command prompt application on my computer.
