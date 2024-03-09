@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-#This script display Best School 10 times
-
-for _ in loop{1..10}
-do
-	echo "Best School"
-done
