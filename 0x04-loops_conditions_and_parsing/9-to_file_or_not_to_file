@@ -12,8 +12,8 @@
 #if the file is a regular file: school is a regular file
 #if the file is not a regular file: (nothing)
 
-file=school
-if [ -e "$file" ]
+file="school"
+if [ -e "file" ]
 then
 	echo "school file exits"
 
@@ -27,8 +27,6 @@ then
 	if [ -f "$file" ]
 	then
 		echo "school file is a regular file"
-	else
-		true
 	fi
 
 else
