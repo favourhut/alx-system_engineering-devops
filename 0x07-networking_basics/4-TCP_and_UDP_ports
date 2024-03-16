@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#This script prints the listening ports of my system
+
+netstat -ano | find "LISTENING"
