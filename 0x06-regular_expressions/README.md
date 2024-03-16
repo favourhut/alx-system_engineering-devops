@@ -1,4 +1,4 @@
-egular expression
+Regular expression
 Regex
 DevOps
  By: Sylvain Kalache
