@@ -5,7 +5,7 @@ It contains taskes that sets us up to understad basic network setting
 
 here are answers to asked questions
 
-=============================TASK ONE================================================
+**========================TASK ONE================**
 You must be able to explain some specifics about this infrastructure:
 
 **What is a server?**
@@ -45,5 +45,18 @@ The design in task one lacks many functionalities for security and efficiency.
 This type of design would definitely expereinced downtime during a maintenace schedule beacuse its server sould be
 down and there would be no backup
 
+**========================TASK TWO================**
 
+You must be able to explain some specifics about this infrastructure:
 
+For every additional element, why you are adding it
+What distribution algorithm your load balancer is configured with and how it works
+Is your load-balancer enabling an Active-Active or Active-Passive setup, explain the difference between both
+How a database Primary-Replica (Master-Slave) cluster works
+What is the difference between the Primary node and the Replica node in regard to the application
+
+You must be able to explain what the issues are with this infrastructure:
+
+Where are SPOF
+Security issues (no firewall, no HTTPS)
+No monitoring
