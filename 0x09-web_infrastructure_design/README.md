@@ -49,14 +49,37 @@ down and there would be no backup
 
 You must be able to explain some specifics about this infrastructure:
 
+**For every additional element, why you are adding it**
+The load balancer distribute traffic among servers for efficiency
+
+**What distribution algorithm your load balancer is configured with and how it works**
+The load balancer distibutive algorithm is the round robin schedle method where each server recieves traffic after the other had recieved. That is, the traffic are distibuted sequencially to all servers.
+
+**Is your load-balancer enabling an Active-Active or Active-Passive setup, explain the difference between both**
+The load balancer is enables to perform active-passive. This enable maintenace to be carried out without interuspting the servers
+
+Active-active: Active-active signifies a configuration where multiple nodes in a network are simultaneously active and operational. In this setup, all nodes are engaged in processing requests and can independently handle user traffic. 
+
+**How a database Primary-Replica (Master-Slave) cluster works**
+It enables data from one database server (primary, previously known as “master”) to be replicated to one or more database servers (secondaries, previously known as “slaves”)
+
+**What is the difference between the Primary node and the Replica node in regard to the application**
+I have no idea!
+
+**==========Task 2==========**
+
 For every additional element, why you are adding it
-What distribution algorithm your load balancer is configured with and how it works
-Is your load-balancer enabling an Active-Active or Active-Passive setup, explain the difference between both
-How a database Primary-Replica (Master-Slave) cluster works
-What is the difference between the Primary node and the Replica node in regard to the application
+**What are firewalls for**
+Firewall are used to block malicious traffic or threats from users or clients
 
-You must be able to explain what the issues are with this infrastructure:
+**Why is the traffic served over HTTPS**
+Traffic served over HTTPS are generally secured becasue all communication are encrypted
 
-Where are SPOF
-Security issues (no firewall, no HTTPS)
-No monitoring
+**What monitoring is used for**
+Monitoring is used to track the generally activities and data of esach server. It takes care of troubleshooting, and remediation of network performance issues
+
+**How the monitoring tool is collecting data**
+Server monitoring tools track the activity on the server by streaming event logs, also called log files, that the server automatically generates.
+
+**Explain what to do if you want to monitor your web server QPS**
+I would generally say, connect the monitors to the servers.
