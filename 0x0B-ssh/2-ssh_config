@@ -1,0 +1,5 @@
+#Client configuration file
+
+Host 471210-web-01
+     PasswordAuthentication no
+     IdentifyFile ~/.ssh/school
