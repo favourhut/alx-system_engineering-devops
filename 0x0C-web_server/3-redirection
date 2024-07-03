@@ -14,5 +14,5 @@ sudo chmod -R 755 /var/www
 
 echo -e "Hello World!" | dd status=none of=/var/www/html/index.nginx-debian.html
 # Redirection
-sudo sed -i '24i\ rewrite ^/redirect_me https://facebook.com permanent;' /etc/nginx/sites_available/default
+sudo sed -i '24i\ rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites_available/default
 sudo service nginx restart
