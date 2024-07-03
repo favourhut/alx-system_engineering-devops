@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Installing Nginx on my server
+
+sudo apt-get update -y -qq && \
+	sudo apt-get install nginx -y
+
+sudo service nginx start
+
+sudo ufw allow 'Nginx HTTP'
+sudo ufw status
+
+sudo chown -R "$USER":"$USER" /var/www/html
+sudo chmod -R 755 /var/www
+
+echo -e "Hello World!" | dd status=none of=/var/www/html/index.nginx-debian.html
+# Redirection
+sudo sed -i '24i\ rewrite ^/redirect_me https://facebook.com;' \
+       	/etc/nginx/sites_available/default
+sudo service nginx restart
