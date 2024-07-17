@@ -1,21 +1,14 @@
 #!/usr/bin/env bash
 # Installing Nginx on my server
 
-sudo apt-get update -y -qq && \
-	sudo apt-get install nginx -y
-
-sudo service nginx start
+sudo apt-get update -y
+sudo apt-get install nginx -y
 
 sudo ufw allow 'Nginx HTTP'
-sudo ufw status
 
-sudo chown -R "$USER":"$USER" /var/www/html
-sudo chmod -R 755 /var/www
-
-#return a page that contains the string Hello World!
 sudo -e "Hello World!" | dd status=none of=/var/www/html/index.nginx-debian.html
 
-#Redirection
+#Redirection using sed
 sed -i '/listen 80 default_server/a rewrite ^/redirect_me https://edugena.com.ng permanent;' /etc/nginx/sites-available/default
 
 sudo service nginx restart
