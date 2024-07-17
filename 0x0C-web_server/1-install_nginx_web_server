@@ -12,6 +12,6 @@ sudo ufw status
 sudo chown -R "$USER":"$USER" /var/www/html
 sudo chmod -R 755 /var/www
 
-echo -e "Hello World!" | dd status=none of=/var/www/html/index.nginx-debian.html
+sh -c echo "Hello World!" > /var/www/html/index.nginx-debian.html
 
 sudo service nginx restart
