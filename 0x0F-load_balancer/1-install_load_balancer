@@ -1,1 +1,18 @@
-#!
+#!/usr/bin/env bash
+# Install your load balancer 
+
+sudo apt-get -y update
+sudo apt-get -y install haproxy
+sudo chown $USER:USER /etc/haproxy/haproxy.cfg
+
+echo "
+frontend fav-frontend
+        bing *:80
+        default_backend fav-backend
+
+backend fav-backend
+        balance roundrobin
+        server  471210-web-01 52.204.117.143:80 check
+        server  471210-web-02 54.157.166.102:80 check" >> /etc/haproxy/haproxy.cfg
+
+sudo service haproxy restart
