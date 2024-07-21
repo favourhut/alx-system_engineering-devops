@@ -8,6 +8,7 @@ sudo chown $USER:USER /etc/haproxy/haproxy.cfg
 echo "
 frontend fav-frontend
         bing *:80
+        mode http
         default_backend fav-backend
 
 backend fav-backend
@@ -15,4 +16,5 @@ backend fav-backend
         server  471210-web-01 52.204.117.143:80 check
         server  471210-web-02 54.157.166.102:80 check" >> /etc/haproxy/haproxy.cfg
 
+sudo service haproxy start
 sudo service haproxy restart
