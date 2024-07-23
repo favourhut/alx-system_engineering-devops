@@ -1,0 +1,8 @@
+# Installing ufw Firewall
+
+sudo apt install ufw
+sudo ufw default deny incoming
+sudo ufw allow 22
+sudo ufw allow 443
+sudo ufw alloq 80
+sudo ufw enable
