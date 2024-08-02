@@ -16,3 +16,6 @@ if __name__ == "__main__":
         result = i.get("title")
         if i.get("completed") == True:
             print("Employee {} is done with tasks({}/{})".format(req.get("name"), len("result"), len(get_todo)))
+            
+            for i in result:
+                print("\t {}".format(i))
