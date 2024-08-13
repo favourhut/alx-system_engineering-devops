@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Function to query a list of all hot posts on a given Reddit subreddit."""
+"""Function to query a list of all hot posts."""
 import requests
 
 
@@ -45,13 +45,13 @@ def recurse(subreddit, hot_list=[], after="", count=0):
                             allow_redirects=False)
     if response.status_code == 404:
         return None
-
+    
     results = response.json().get("data")
     after = results.get("after")
     count += results.get("dist")
     for post in results.get("children"):
         hot_list.append(post.get("data").get("title"))
-
+                
     if after is not None:
         return recurse(subreddit, hot_list, after, count)
 >>>>>>> 13d9e89e8e9e526f62e1eef6965b674cce4ca246
