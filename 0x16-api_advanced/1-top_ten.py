@@ -9,7 +9,7 @@ def top_ten(subreddit):
     api_url = "https://www.reddit.com/r/{}/top.json".format(subreddit)
     headers = {"User-Agent": "Mozilla/5.0 "}
     params = {"limit": 10}
-    
+
     response = requests.get(api_url, headers=headers, params=params,
                             allow_redirects=False)
     if response.status_code == 404:
