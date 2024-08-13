@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Function to query the Reddit API and return the number of 
+"""Function to query the Reddit API and return the number of
 subscribers for a given subreddit"""
 
 import json
@@ -15,7 +15,6 @@ def number_of_subscribers(subreddit):
     Returns:
         int: The number of subscribers, or 0 if the subreddit is invalid.
     """
-    
     api_url = "https://www.reddit.com/r/{}/about.json"
     HEADER = {"User-Agent": "custome-agent"}
     
