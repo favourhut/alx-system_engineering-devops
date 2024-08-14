@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """Gets subscribers on a given Reddit subreddit."""
 
 import requests
