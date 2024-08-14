@@ -7,7 +7,7 @@ import requests
 def top_ten(subreddit):
     """If not a valid subreddit, print None"""
     api_url = "https://www.reddit.com/r/{}/top.json".format(subreddit)
-    headers = {"User-Agent": "Mozilla/5.0 "}
+    headers = {"User-Agent": "Mozilla/5.0"}
     params = {"limit": 10}
 
     response = requests.get(api_url, headers=headers, params=params,
